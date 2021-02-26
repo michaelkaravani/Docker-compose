@@ -1,0 +1,14 @@
+version: '3'
+      
+services:
+  cloud9:
+    container_name: Cloud9
+    restart: always
+    image: sapk/cloud9:latest
+    volumes:
+      - /home/##user##/workspace/server-files  #{change tish ##user## to your user}
+      - /etc/localtime:/etc/localtime:ro
+    command: ["--auth", "##user##:##password##"] #{change tish ##user## to your user and ##password## to your password}
+    ports:
+      - "8181:8181"
+    network_mode: bridge
