@@ -1,4 +1,4 @@
-version: "3.6"
+version: "3.6" 
 services:
   broadlinkmanager:
     image: techblog/broadlinkmanager
@@ -8,3 +8,4 @@ services:
     restart: unless-stopped
     volumes:
       - ./broadlinkmanager:/opt/broadlinkmanager/data
+# port for this container 7020
